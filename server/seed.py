@@ -5,7 +5,7 @@ from faker import Faker
 from app import app
 from models import db, Newsletter
 
-
+print('seeding...')
 with app.app_context():
     
     fake = Faker()
@@ -22,3 +22,4 @@ with app.app_context():
 
     db.session.add_all(newsletters)
     db.session.commit()
+print('done seeding!')
